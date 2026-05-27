@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int a,b,c,d;
+        cin>>a>>b>>c>>d;
+        if(b>d) cout<<"-1 \n";
+        else{
+            int q=d-b; 
+            int p=c-a;
+            if(p>q) cout<<"-1 \n";
+            else{
+                
+                a+=q;
+                int y=a-c;
+                cout<<y+q<<"\n";
+            }
+        }
+    }
+    return 0;
+}
