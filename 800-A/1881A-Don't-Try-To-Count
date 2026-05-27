@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n,m;
+        string x,y;
+        cin>>n>>m>>x>>y;
+        string temp=x;
+        int cnt=0;
+        while(temp.size()<100){
+            if(temp.find(y)!=string::npos){
+                cout<<cnt<<"\n";
+                break;
+            }
+            temp+=temp;
+            cnt++;
+        }
+        if(temp.find(y)==string::npos) cout<<"-1 \n";
+    }return 0;
+}
