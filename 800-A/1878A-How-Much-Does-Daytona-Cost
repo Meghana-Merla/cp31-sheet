@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n,m;        
+        cin>>n>>m;
+        bool ok=false;
+        vector<int>a(n);
+        for(int i=0;i<n;i++) cin>>a[i];
+        for(int i=0;i<n;i++){
+            if(a[i]==m) {
+                cout<<"YES \n";
+                ok=true;
+                break;
+            }
+        }
+        if(!ok) cout<<"NO \n";
+    }return 0;
+}
